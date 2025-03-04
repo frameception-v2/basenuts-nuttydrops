@@ -31,7 +31,9 @@
   
   const decodeState = (state: string) => {
     try {
-      return JSON.parse(Buffer.from(state, 'base64url').toString());
+      const decoded = JSON.parse(Buffer.from(state, 'base64url').toString());
+      // Clamp page number between 1-3 to prevent invalid states
+      return { page: Math.max(1, Math.min(3, decoded.page)) };
     } catch {
       return { page: 1 };
     }
@@ -84,7 +86,7 @@
   ```
   Completion: Invalid requests return error status before processing
 
-- [ ] Task 5: Add state validation guard  
+- [x] Task 5: Add state validation guard  
   File: app/api/frame/route.ts  
   Action: Modify decodeState  
   Description:
