@@ -45,7 +45,7 @@
   ```
   Completion: Buttons cycle through 3 pages with state in URLs
 
-- [ ] Task 3: Create OG image templates  
+- [x] Task 3: Create OG image templates  
   Files:  
   - app/components/og/page1.tsx  
   - app/components/og/page2.tsx  
