@@ -1,4 +1,4 @@
-- [ ] Task 1: Create core frame endpoint handler  
+- [x] Task 1: Create core frame endpoint handler  
   File: app/api/frame/route.ts  
   Action: Create file  
   Description:  
