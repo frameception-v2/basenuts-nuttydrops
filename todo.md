@@ -64,7 +64,7 @@
   ```
   Completion: All 3 templates render static images via /api/image/[1-3]
 
-- [ ] Task 4: Integrate Neynar validation  
+- [x] Task 4: Integrate Neynar validation  
   File: app/api/frame/route.ts  
   Action: Add validation check  
   Description:

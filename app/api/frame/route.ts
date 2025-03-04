@@ -1,6 +1,20 @@
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
+  // Validate request with Neynar API
+  const validationResponse = await fetch('https://api.neynar.com/v2/farcaster/frame/validate', {
+    method: 'POST',
+    headers: {
+      'api_key': process.env.NEYNAR_API_KEY!,
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify({ message_bytes: await req.text() })
+  });
+
+  if (!validationResponse.ok) {
+    return new NextResponse('Invalid request', { status: 400 });
+  }
+
   // Basic page 1 response with Next button
   const htmlContent = `
     <!DOCTYPE html>
