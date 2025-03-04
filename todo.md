@@ -20,7 +20,7 @@
   ```
   Completion: POST endpoint returns Season 1 screen with Next button
 
-- [ ] Task 2: Add state management logic  
+- [x] Task 2: Add state management logic  
   File: app/api/frame/route.ts  
   Action: Add state encoding/decoding  
   Description:  
